@@ -1,0 +1,35 @@
+
+<!sdgsdgdsgdsgsdgsdgsdgdsgdsgdsgdsgdsg!>
+<html>
+<body bgcolor="#ADD8E6"; position: relative;
+    text-align: center>
+{% extends "base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+{% block head %}Welcome to Django{% endblock %}
+{% block content %}
+    <p>Welcome {{ user.username }} !!!</p>
+    <p><h2>Showing Information of All Scholarship</h2></p>
+    <table border = "dashed">
+    <tr>
+        <th>name</th>
+        <th>amount_in_rupees</th>
+        <th>deadline</th>
+        <th>created</th>
+        <th>procedure</th>
+        <th>eligibility</th>
+    </tr>
+    {% for item in query_results %}
+    <tr> 
+        <td>{{ item.name }}</td>
+        <td>{{ item.amount_in_rupees }}</td>
+        <td>{{ item.deadline }}</td>
+        <td>{{ item.created }}</td>
+        <td>{{ item.procedure }}</td>
+        <td>{{ item.eligibility }}</td>
+    </tr>
+    {% endfor %}
+</table>
+    <a href="/logout/">Logout</a>
+{% endblock %}
+</body>
+</html>
