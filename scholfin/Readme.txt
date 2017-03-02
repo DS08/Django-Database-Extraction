@@ -1,5 +1,5 @@
 
-Some imortant notes about app:
+Some important notes about app:
 
 
 Django version used: 1.9
